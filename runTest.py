@@ -1,5 +1,6 @@
 import unittest
 from bin.sendMail import sendMail
+from bin.configRead import configRead
 
 testDir='./case/'
 discover=unittest.defaultTestLoader.discover(testDir,'test*.py')

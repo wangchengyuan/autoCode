@@ -2,23 +2,25 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
+from bin.configRead import configRead
 
 class sendMail():
 
     def send_mail(self):
+        config=configRead()
         #设置发送服务器
-        sendserver="smtp.163.com"
+        sendserver=config.config_Read_Mail('sendserver')
         #用户名和密码
-        username="tianyasisi11@163.com"
-        password="tianya1124"
+        username=config.config_Read_Mail('username')
+        password=config.config_Read_Mail('password')
         #发送方
-        sender="tianyasisi11@163.com"
+        sender=config.config_Read_Mail('sender')
         #接收方
-        recevier="784444045@qq.com"
+        recevier=config.config_Read_Mail('recevier')
         #发送邮件主题
-        subject="Python test"
+        subject=config.config_Read_Mail('subject')
         #发送内容
-        msg=MIMEText("HELLO")
+        msg=MIMEText(config.config_Read_Mail('msg'))
         msg['Subject']=Header(subject,"utf-8")
 
         #连接发送邮件
