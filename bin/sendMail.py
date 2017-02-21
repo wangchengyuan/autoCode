@@ -31,18 +31,18 @@ class sendMail():
         smtp.quit()
 
     def send_mail_att(self):
-
-        #设置发送服务器
-        sendserver="smtp.qq.com"
-        #用户名和密码
-        username="7844045@qq.com"
-        password="tianyalieren"
-        #发送方
-        sender="78444045@qq.com"
-        #接收方
-        recevier="917515308@qq.com"
-        #发送邮件主题
-        subject="Python test"
+        config = configRead()
+        # 设置发送服务器
+        sendserver = config.config_Read_Mail('sendserver')
+        # 用户名和密码
+        username = config.config_Read_Mail('username')
+        password = config.config_Read_Mail('password')
+        # 发送方
+        sender = config.config_Read_Mail('sender')
+        # 接收方
+        recevier = config.config_Read_Mail('recevier')
+        # 发送邮件主题
+        subject = config.config_Read_Mail('subject')
         #发送附件
         sendfile=open('D:\\test\\test.txt','rb').read()
 
