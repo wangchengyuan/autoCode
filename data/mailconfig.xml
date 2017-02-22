@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+  <base>
+     <sendserver>smtp.163.com</sendserver>
+	 <username>tianyasisi11@163.com</username>
+	 <password>tianya1124</password>
+	 <sender>tianyasisi11@163.com</sender>
+	 <recevier>784444045@qq.com</recevier>
+	 <subject>Python test</subject>
+	 <msg>HELLO WORLD</msg>
+  </base>
+</info>

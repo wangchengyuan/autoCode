@@ -5,7 +5,7 @@ class configRead():
     #邮件配置
     def config_Read_Mail(self,tagName):
         #打开xml文档
-        dom = minidom.parse("D:\\test3\\mailconfig.xml")
+        dom = minidom.parse("./data/mailconfig.xml")
         #获取文档元素对象
         root=dom._get_documentElement()
         tagname=root.getElementsByTagName(tagName)
